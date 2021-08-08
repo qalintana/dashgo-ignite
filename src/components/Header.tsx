@@ -1,5 +1,9 @@
-import { Flex, Text, Input, Icon } from '@chakra-ui/react';
-import { RiSearchFill } from 'react-icons/ri';
+import { Flex, Text, Input, Icon, HStack, Box, Avatar } from '@chakra-ui/react';
+import {
+  RiNotificationLine,
+  RiSearchFill,
+  RiUserAddLine,
+} from 'react-icons/ri';
 
 export function Header() {
   return (
@@ -44,6 +48,35 @@ export function Header() {
         />
 
         <Icon as={RiSearchFill} fontSize="20" />
+      </Flex>
+
+      <Flex align="center" ml="auto">
+        <HStack
+          spacing="8"
+          mx="8"
+          pr="8"
+          py="1"
+          color="gray.300"
+          borderRightWidth={1}
+        >
+          <Icon as={RiNotificationLine} size="20" />
+          <Icon as={RiUserAddLine} size="20" />
+        </HStack>
+      </Flex>
+
+      <Flex align="center">
+        <Box mr="4" textAlign="right">
+          <Text>Queiroz Santana</Text>
+          <Text color="gray.300" fontSize="small">
+            queiroz.mahili@gmail.com
+          </Text>
+        </Box>
+
+        <Avatar
+          size="md"
+          name="Queiroz Santana"
+          src="https://github.com/qalintana.png"
+        />
       </Flex>
     </Flex>
   );
